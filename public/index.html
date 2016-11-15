@@ -1,41 +1,107 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! • A-Frame</title>
-    <meta name="description" content="Hello, World! • A-Frame">
+    <title>Depauw VR</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbEfMXsxATRh9AMfL9q5NRcFM1E504uF4"
-     defer></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/freelance.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
-  <body ng-controller="skyController">
-    <a-scene>
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container" id="nav-container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Depauw Mobile VR</a>
+        </div>
+      </div>
+    </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>Take the Tour!</h1>
+        <p>
+          <a class="btn btn-lg btn-primary" href="/bowman" role="button">Start! &raquo;</a>
+        </p>
+    </div>
+
+    <div class="container" id="select-location-container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Select a location from the dropdown!</h3>
+          <select class="form-control" onchange="location = this.options[this.selectedIndex].value;">
+            <option selected="true" disabled>Locations...</option>
+            <option value='/academicquad'>Academic Quad</option>
+            <option value='/roy'>Roy O. West 2nd Floor</option>
+            <option value='/bowman'>Bowman Park</option>
+            <option value='/rector'>Rector Village</option>
+            <option value='/boulder'>East College</option>
+            <option value='/julian'>Julian Atrium</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><b>About this project!</b></h3>
+            </div>
+            <div class="panel-body">
+              <p>This project is a demonstration of the exciting capabilities of WebGL to craft Virtual Reality experiences.
+                Instead of shelling out thousands of dollars for an Oculus Rift or other mainline VR platform you can instead
+                have similar experiences right on your phone! The growing capabilities of
+                WebGL in the browser combined with the ever increasing performace of both desktop and mobile devices may one day revolutionize
+                the way we experience the internet - from a 'marked up' document experience, to more graphics oriented interactions.
+                This project leverages Mozilla's new MobileVR API to interface with the hardware on smartphones to craft a VR experience right
+                from the mobile browser. By combining this with AFrame, a Web Graphics framework dedicated to Mobile VR, you can experience a tour
+                of DePauw University right from your phone - all you need is an internet connection and a mobile device with a modern browser! <p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><b>How to use this project!</b></h3>
+            </div>
+            <div class="panel-body">
+              <p>Just tap/click on the 'Start' button or select a locaton from the dropdown to get started!
+                To transition to the next location just keep your VR cursor focused on the location of interest
+                (marked by a sphere) for <b>5 seconds</b>. To return to the home page to select a location manually
+                from the dropdown, simply stare at the 'X' rendered below you for <b>5 seconds as well</b>. Otherwise, this
+                experience behaves just like a regular website.<p>
+
+              <i>If you have Mobile VR goggles such as google cardboard, you can press the 'VR' button render a traditional VR
+                  view with your phone! If you want to go back after entering VR mode however, you will need to use your
+                  browser's back button.</i>
+            </div>
+          </div>
+
+        </div>
 
 
-      <a-sky id="panorama" src="img/AcademicQuad.jpg" rotation="0 0 0"></a-sky>
+      </div>
+    </div>
 
-      <a-entity position="5 0 -4.2" rotation="0 270 0" size="3" text="text: Academic Quad" material="color:#ffff00;"></a-entity>
+    <div class="container" id="footer">
+      <div class="row">
+        <div class="col-md-12">
+          Created By Grant Skipper '2017 for his senior project.
+        </div>
+      </div>
+    </div>
 
-      <a-entity position="20 5 -2">
-        <a-sphere color="#EF2D5E" radius=".75"></a-sphere>
-      </a-entity>
-
-      <a-entity position="0 0 -1.5" geometry="primitive: box; width: .25; height: .25; depth: 1" material="color:red;"></a-entity>
-      <a-entity position="0 0 -1.5" geometry="primitive: box; width: 1; height: .25; depth: 0.25" material="color:red;"></a-entity>
-
-      <a-entity position="0 1.4 -1.5" rotation="0 180 0">
-        <a-camera wasd-controls-enabled="false">
-          <a-cursor material="color: red; shader: flat">></a-cursor>
-        </a-camera>
-      </a-entity>
-
-
-
-    </a-scene>
   </body>
+
 </html>

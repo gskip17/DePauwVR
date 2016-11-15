@@ -5,8 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-
 var app = express();
 
 // view engine setup
@@ -25,6 +23,18 @@ app.engine('html', require('ejs').renderFile);
 //app.use('/users', users);
 
 // Register Routes
+
+app.get('',function(req,res){
+  res.render('Home.html');
+});
+
+app.get('/',function(req,res){
+  res.render('Home.html');
+});
+
+app.get('/home', function(req,res){
+  res.render('Home.html');
+});
 
 app.get('/academicquad', function(req, res){
   res.render('AcademicQuad.html');
