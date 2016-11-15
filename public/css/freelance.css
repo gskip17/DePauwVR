@@ -18,6 +18,10 @@ body {
 .jumbotron p, .jumbotron h1 {
   margin-top:60px;
 }
+select {
+  text-align: center;
+  text-align-last:center;
+}
 
 #select-location-container {
   padding-bottom:30px;
