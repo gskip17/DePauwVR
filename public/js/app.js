@@ -29,7 +29,7 @@ var timeouts = [];
               else if (cursor.hover == false){
                 console.log("No redirect");
               }
-            }, 3200));
+            }, 3000));
           });
         }
       });
@@ -87,7 +87,7 @@ var timeouts = [];
               else if (cursor.Xhover == false){
                 console.log("No redirect");
               }
-            }, 3200));
+            }, 3000));
 
           });
         }

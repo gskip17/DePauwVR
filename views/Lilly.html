@@ -18,28 +18,14 @@
     <a-scene>
 
 
-      <a-sky id="panorama" src="img/bowman.jpg" rotation="0 0 0"></a-sky>
+      <a-sky id="panorama" src="img/lilly.jpg" rotation="0 0 0"></a-sky>
 
-      <a-entity position="-4 1 4.2" rotation="0 -250 0" size="3" text="text: Bowman Park" material="color:#ffff00;"></a-entity>
+      <a-entity position="2 0 -5.2" rotation="0 300 0" size="3" text="text: Lilly Center" material="color:#ffff00;"></a-entity>
 
-      <!-- To Boulder -->
-      <a-entity position="17 2 20">
-        <a-sphere id="sphere" redirect="boulder" cursor-leave cursor-enter color="#EF2D5E" radius=".75"></a-sphere>
-      </a-entity>
 
-      <!-- To Inside Julian -->
-      <a-entity position="25 3 -35">
-        <a-sphere id="sphere" redirect="julian" cursor-leave cursor-enter color="#EF2D5E" radius=".75"></a-sphere>
-      </a-entity>
-
-      <!-- To Inside Lilly -->
-      <a-entity position="2 5 -50">
-        <a-sphere id="sphere" redirect="lilly" cursor-leave cursor-enter color="#EF2D5E" radius=".75"></a-sphere>
-      </a-entity>
-
-      <!-- To Rector Village -->
-      <a-entity position="-15 4 20">
-        <a-sphere id="sphere" redirect="rector" cursor-leave cursor-enter color="#EF2D5E" radius=".75"></a-sphere>
+      <!-- To Bowman -->
+      <a-entity position="-30 2 -2">
+        <a-sphere id="sphere" redirect="bowman" cursor-leave cursor-enter color="#EF2D5E" radius=".75"></a-sphere>
       </a-entity>
 
       <a-entity id="X1" X-enter X-leave position="0 0 -1.5" geometry="primitive: box; width: .25; height: .25; depth: 1" material="color:red;"></a-entity>

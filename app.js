@@ -40,6 +40,10 @@ app.get('/academicquad', function(req, res){
   res.render('AcademicQuad.html');
 });
 
+app.get('/anderson', function(req, res){
+  res.render('AndersonStreet.html');
+});
+
 app.get('/roy', function(req, res){
   res.render('Roy.html');
 });
@@ -52,13 +56,19 @@ app.get('/bowman', function(req, res){
   res.render('Bowman.html');
 });
 
+app.get('/julian', function(req, res){
+  res.render('Julian.html');
+});
+
+app.get('/lilly', function(req, res){
+  res.render('Lilly.html');
+});
+
 app.get('/rector', function(req, res){
   res.render('Rector.html');
 });
 
-app.get('/julian', function(req, res){
-  res.render('Julian.html');
-});
+
 
 
 
