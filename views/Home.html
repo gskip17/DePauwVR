@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body onload="$('#placeholder').selected = true;">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container" id="nav-container">
@@ -40,7 +40,7 @@
           <select class="form-control" onchange="location = this.options[this.selectedIndex].value;">
             <option selected="true" disabled>Locations...</option>
             <option value='/academicquad'>Academic Quad</option>
-            <option value='/anderson'>AndersonStreet</option>
+            <option value='/anderson'>Anderson Street</option>
             <option value='/lilly'>Lilly Center</option>
             <option value='/roy'>Roy O. West 2nd Floor</option>
             <option value='/bowman'>Bowman Park</option>
@@ -104,6 +104,11 @@
 
       </div>
     </div>
+
+    <script>
+      // on page load reset select box no matter what.
+      $('#placeholder').selected = true;
+    </script>
 
     <div class="container" id="footer">
       <div class="row">
