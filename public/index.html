@@ -40,7 +40,7 @@
           <select class="form-control" onchange="location = this.options[this.selectedIndex].value;">
             <option selected="true" disabled>Locations...</option>
             <option value='/academicquad'>Academic Quad</option>
-            <option value='/anderson'>Anderson Street</option>
+            <option value='/anderson'>AndersonStreet</option>
             <option value='/anderson'>Lilly Center</option>
             <option value='/roy'>Roy O. West 2nd Floor</option>
             <option value='/bowman'>Bowman Park</option>
@@ -60,14 +60,17 @@
               <h3 class="panel-title"><b>About this project!</b></h3>
             </div>
             <div class="panel-body">
-              <p>This project is a demonstration of the exciting capabilities of WebGL to craft Virtual Reality experiences.
+              <p>This project is a demonstration of the exciting capability of WebGL in crafting Virtual Reality experiences.
                 Instead of shelling out thousands of dollars for an Oculus Rift or other mainline VR platform you can instead
-                have similar experiences right on your phone! The growing capabilities of
-                WebGL in the browser combined with the ever increasing performace of both desktop and mobile devices may one day revolutionize
-                the way we experience the internet - from a 'marked up' document experience, to more graphics oriented interactions.
+                have similar VR experiences right on your mobile device!</p>
+                <p> The growing sophistication of WebGL has allowed for more GPU intensive graphics to be rendered right in your browser.
+                As devices and hardware become more powerful, more graphics oriented interactions may begin to replace the standard 'document' experience
+                that currently characterizes the web. One day soon, web applications might become more interactive and immersive by allowing you to navigate in virtual reality.
+                Unsure about going to that new restaurant? Why not pull up a 3d rendering of it and check out the atmosphere before you decide to go?</p>
+                <p>
                 This project leverages Mozilla's new MobileVR API to interface with the hardware on smartphones to craft a VR experience right
                 from the mobile browser. By combining this with AFrame, a Web Graphics framework dedicated to Mobile VR, you can experience a tour
-                of DePauw University right from your phone - all you need is an internet connection and a mobile device with a modern browser! <p>
+                of DePauw University right from your phone - all you need is an internet connection and a mobile device with a modern browser! </p>
             </div>
           </div>
 
@@ -79,15 +82,20 @@
               <h3 class="panel-title"><b>How to use this project!</b></h3>
             </div>
             <div class="panel-body">
-              <p>Just tap/click on the 'Start' button or select a locaton from the dropdown to get started!
-                To transition to the next location just keep your VR cursor focused on the location of interest
-                (marked by a sphere) for <b>5 seconds</b>. To return to the home page to select a location manually
-                from the dropdown, simply stare at the 'X' rendered below you for <b>5 seconds as well</b>. Otherwise, this
-                experience behaves just like a regular website.<p>
+              <p>Just tap/click on the 'Start' button or select a locaton from the dropdown to get started!</p>
+              <p>
+                <ul>
+                  <li>Your VR cursor is the red circle in the center of your screen.</li>
+                  <li>Move the cursor and look around by rotating your device around.</li>
+                  <li>Hover your cursor over a Sphere for <b>5 seconds</b> to move to the next location.</li>
+                  <li>Hover over the 'X' rendered below you for 5 seconds to exit and return to the home page.</li>
+                  <li>This experience behaves like a typical website, so the 'page-back' and 'page-forward' commands will work.</li>
+                </ul>
+              </p>
 
-              <i>If you have Mobile VR goggles such as google cardboard, you can press the 'VR' button render a traditional VR
+              <p><i>If you have Mobile VR goggles such as google cardboard, you can press the 'VR' button render a traditional VR
                   view with your phone! If you want to go back after entering VR mode however, you will need to use your
-                  browser's back button.</i>
+                  browser's back button.</i></p>
             </div>
           </div>
 
